@@ -9,7 +9,7 @@ import messageRoute from "./Routes/Messageroute.js"
 import { app, server } from "./socket/socket.js";
 
 dotenv.config();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
     return res.status(200).json({
@@ -23,7 +23,7 @@ app.use(cookieParser());
 app.use(urlencoded({extended:true}));
 
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: process.env.URL || 'http://localhost:5173',
     credentials: true 
 };
 
