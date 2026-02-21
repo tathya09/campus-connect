@@ -25,7 +25,7 @@ const Search = () => {
     const handleSearch = async (searchQuery) => {
         setLoading(true);
         try {
-            const res = await axios.get(`http://localhost:3000/api/v1/user/search?query=${searchQuery}`, {
+            const res = await axios.get(`https://campus-connect-bn54.vercel.app/api/v1/user/search?query=${searchQuery}`, {
                 withCredentials: true
             });
             if (res.data.success) {

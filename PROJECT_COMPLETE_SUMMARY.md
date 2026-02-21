@@ -259,7 +259,7 @@ npm run dev
 ### Access:
 
 - Frontend: http://localhost:5173
-- Backend: http://localhost:3000
+- Backend: https://campus-connect-bn54.vercel.app
 
 ---
 

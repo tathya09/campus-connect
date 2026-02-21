@@ -294,7 +294,7 @@ io.on("connection", (socket) => {
 });
 
 // Client
-const socket = io("http://localhost:3000", {
+const socket = io("https://campus-connect-bn54.vercel.app", {
   query: { userId: user?._id },
 });
 ```
@@ -404,7 +404,7 @@ const corsOptions = {
 **Frontend (.env):**
 
 ```
-VITE_API_URL=http://localhost:3000
+VITE_API_URL=https://campus-connect-bn54.vercel.app
 VITE_HF_TOKEN=optional_huggingface_token
 ```
 

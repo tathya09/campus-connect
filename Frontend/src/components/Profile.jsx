@@ -34,7 +34,7 @@ const Profile = () => {
 
   const followOrUnfollowHandler = async () => {
     try {
-      const res = await axios.post(`http://localhost:3000/api/v1/user/followorunfollow/${userId}`, {}, { withCredentials: true });
+      const res = await axios.post(`https://campus-connect-bn54.vercel.app/api/v1/user/followorunfollow/${userId}`, {}, { withCredentials: true });
       if (res.data.success) {
         toast.success(res.data.message);
         
@@ -59,7 +59,7 @@ const Profile = () => {
 
   const fetchFollowers = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/v1/user/${userId}/followers`, { withCredentials: true });
+      const res = await axios.get(`https://campus-connect-bn54.vercel.app/api/v1/user/${userId}/followers`, { withCredentials: true });
       if (res.data.success) {
         setFollowersList(res.data.followers);
         setShowFollowersDialog(true);
@@ -72,7 +72,7 @@ const Profile = () => {
 
   const fetchFollowing = async () => {
     try {
-      const res = await axios.get(`http://localhost:3000/api/v1/user/${userId}/following`, { withCredentials: true });
+      const res = await axios.get(`https://campus-connect-bn54.vercel.app/api/v1/user/${userId}/following`, { withCredentials: true });
       if (res.data.success) {
         setFollowingList(res.data.following);
         setShowFollowingDialog(true);

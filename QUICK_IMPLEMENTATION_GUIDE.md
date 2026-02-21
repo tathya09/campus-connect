@@ -83,7 +83,7 @@ const Search = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `http://localhost:3000/api/v1/user/search?query=${searchQuery}`,
+        `https://campus-connect-bn54.vercel.app/api/v1/user/search?query=${searchQuery}`,
         {
           withCredentials: true,
         },
@@ -294,12 +294,18 @@ const Explore = () => {
     const fetchExploreData = async () => {
       try {
         const [postsRes, usersRes] = await Promise.all([
-          axios.get("http://localhost:3000/api/v1/post/explore", {
-            withCredentials: true,
-          }),
-          axios.get("http://localhost:3000/api/v1/post/popular-users", {
-            withCredentials: true,
-          }),
+          axios.get(
+            "https://campus-connect-bn54.vercel.app/api/v1/post/explore",
+            {
+              withCredentials: true,
+            },
+          ),
+          axios.get(
+            "https://campus-connect-bn54.vercel.app/api/v1/post/popular-users",
+            {
+              withCredentials: true,
+            },
+          ),
         ]);
 
         if (postsRes.data.success) {
@@ -661,9 +667,12 @@ const Notifications = () => {
 
   const fetchNotifications = async () => {
     try {
-      const res = await axios.get("http://localhost:3000/api/v1/notification", {
-        withCredentials: true,
-      });
+      const res = await axios.get(
+        "https://campus-connect-bn54.vercel.app/api/v1/notification",
+        {
+          withCredentials: true,
+        },
+      );
       if (res.data.success) {
         setNotifications(res.data.notifications);
       }
@@ -677,7 +686,7 @@ const Notifications = () => {
   const markAllAsRead = async () => {
     try {
       const res = await axios.put(
-        "http://localhost:3000/api/v1/notification/read-all",
+        "https://campus-connect-bn54.vercel.app/api/v1/notification/read-all",
         {},
         {
           withCredentials: true,

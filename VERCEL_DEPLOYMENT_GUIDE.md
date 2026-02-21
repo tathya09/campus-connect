@@ -57,14 +57,15 @@ Update `Frontend/src/lib/axios.js`:
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:3000",
+  baseURL:
+    import.meta.env.VITE_API_URL || "https://campus-connect-bn54.vercel.app",
   withCredentials: true,
 });
 
 export default axiosInstance;
 ```
 
-Then replace all `http://localhost:3000` with the axios instance in all components.
+Then replace all `https://campus-connect-bn54.vercel.app` with the axios instance in all components.
 
 ## Part 2: Deploy Backend to Vercel
 

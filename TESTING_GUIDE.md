@@ -9,7 +9,7 @@ cd Backend
 npm run dev
 ```
 
-Backend should start on: `http://localhost:3000`
+Backend should start on: `https://campus-connect-bn54.vercel.app`
 
 ### 2. Start the Frontend
 

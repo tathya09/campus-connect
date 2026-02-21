@@ -262,7 +262,7 @@ URL=http://localhost:5173
 **Frontend/.env.example:**
 
 ```
-VITE_API_URL=http://localhost:3000
+VITE_API_URL=https://campus-connect-bn54.vercel.app
 VITE_HF_TOKEN=optional_huggingface_token
 ```
 

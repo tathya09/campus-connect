@@ -13,8 +13,8 @@ const Explore = () => {
         const fetchExploreData = async () => {
             try {
                 const [postsRes, usersRes] = await Promise.all([
-                    axios.get('http://localhost:3000/api/v1/post/explore', { withCredentials: true }),
-                    axios.get('http://localhost:3000/api/v1/post/popular-users', { withCredentials: true })
+                    axios.get('https://campus-connect-bn54.vercel.app/api/v1/post/explore', { withCredentials: true }),
+                    axios.get('https://campus-connect-bn54.vercel.app/api/v1/post/popular-users', { withCredentials: true })
                 ]);
 
                 if (postsRes.data.success) {

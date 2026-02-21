@@ -12,7 +12,7 @@ const SuggestedUsers = () => {
     
     const followHandler = async (userId) => {
         try {
-            const res = await axios.post(`http://localhost:3000/api/v1/user/followorunfollow/${userId}`, {}, { withCredentials: true });
+            const res = await axios.post(`https://campus-connect-bn54.vercel.app/api/v1/user/followorunfollow/${userId}`, {}, { withCredentials: true });
             if (res.data.success) {
                 toast.success(res.data.message);
                 
